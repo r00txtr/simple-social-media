@@ -1,0 +1,5 @@
+services:
+  web:
+    image: ${DOCKER_USER}/r00txtr1-simple-social-media
+    ports:
+      - "8000:8000"
