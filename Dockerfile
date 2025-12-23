@@ -32,6 +32,8 @@ RUN mkdir -p bootstrap/cache \
     chown -R www-data:www-data bootstrap storage && \
     chmod -R ug+rwx bootstrap storage
 
+RUN pwd
+RUN ls -la
 RUN chmod +x install.sh && ./install.sh
 
 RUN chown -R www-data:www-data /var/www/sosmed && \
