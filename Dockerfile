@@ -20,8 +20,8 @@ RUN curl -sS https://getcomposer.org/installer -o composer-setup.php && \
 RUN mkdir -p /var/www/sosmed
 WORKDIR /var/www/sosmed
 
-ADD . /var/www/sosmed
-ADD sosmed.conf /etc/apache2/sites-available/
+COPY . /var/www/sosmed
+COPY sosmed.conf /etc/apache2/sites-available/
 
 RUN a2dissite 000-default.conf && a2ensite sosmed.conf
 
